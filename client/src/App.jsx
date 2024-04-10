@@ -7,7 +7,6 @@ import Services from "./components/Services";
 import Pricing from "./components/Pricing";
 import Roadmap from "./components/Roadmap";
 import Footer from "./components/Footer";
-import Sign from "./components/Sign";
 
 const App = () => {
   return (
@@ -22,7 +21,6 @@ const App = () => {
           <Pricing />
           <Roadmap />
           <Footer />
-          <Sign />
         </div>
         <ButtonGradient />
       </div>

@@ -25,7 +25,11 @@ const PricingList = () => {
           </div>
           <Button
             className="w-full mb-6"
-            href={item.price ? "/pricing" : "mailto:ishannaik7@gmail.com"}
+            href={
+              item.price
+                ? "https://buy.stripe.com/test_7sI6oG7tEdJ04368ww"
+                : "mailto:ishannaik7@gmail.com"
+            }
             white={!!item.price}
           >
             {item.price ? "Get Started" : "Contact Us"}
