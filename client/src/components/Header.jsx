@@ -76,9 +76,17 @@ const Header = () => {
         </nav>
 
         {isSignedIn ? (
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+          <>
+            <a
+              href="https://billing.stripe.com/p/login/test_bIY6q892ZdT83jGaEE"
+              className="mr-5 text-n-1/50 transition-colors hover:text-n-1/50"
+            >
+              Manage Account
+            </a>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+          </>
         ) : (
           <>
             <a
