@@ -21,4 +21,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ./client/dist # Change this to your build output directory
+          publish_dir: /client/dist # Change this to your build output directory
