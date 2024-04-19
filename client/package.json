@@ -1,8 +1,8 @@
 {
   "name": "business",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
-  "homepage": "https://ishannaik.github.io/Ai-For-Small-business/",
+  "homepage": "https://ishannaik.github.io/brainwave/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build-if-needed",
