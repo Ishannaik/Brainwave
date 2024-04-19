@@ -32,4 +32,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: Ai-For-Small-business/client/dist # Use the dist directory found in the verification step
+          publish_dir: ./client/dist # Use the dist directory found in the verification step
