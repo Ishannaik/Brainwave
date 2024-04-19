@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "%REACT_APP_GH_PAGES% ? 'https://ishannaik.github.io/brainwave/' : ''",
+  "homepage": "%REACT_APP_GH_PAGES% ? '/brainwave' : ''",
   "scripts": {
     "start": "node server.js",
-    "predeploy": "REACT_APP_GH_PAGES=true react-scripts build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "set REACT_APP_GH_PAGES=true && npm run build",
+    "deploy": "gh-pages -d ../client/dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm install && npm run build:client",
-    "build:client": "cd ../client && npm install && npm run build "
+    "build:client": "cd ../client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
