@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": false,
   "homepage": "%REACT_APP_GH_PAGES% ? '/brainwave' : ''",
   "scripts": {
     "start": "node server.js",
