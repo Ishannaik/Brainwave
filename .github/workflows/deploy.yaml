@@ -16,26 +16,10 @@ jobs:
         run: |
           npm install
           cd server && npm run build
-
-      - name: Find dist directory
-        id: find-dist
-        run: |
-          dist_dir=$(find . -type d -name "dist")
-          echo "::set-output name=dist_dir::$dist_dir"
-
-      - name: Verify build completion and dist directory
-        run: |
-          if [ -d "${{ steps.find-dist.outputs.dist_dir }}" ]; then
-            echo "Build completed successfully!"
-            echo "Path to dist directory: ${{ steps.find-dist.outputs.dist_dir }}"
-          else
-            echo "Build failed or dist directory does not exist."
-            exit 1
-          fi
+          cd ..
 
       - name: Deploy to GitHub Pages
-        if: success() # Only deploy if the verification step is successful
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ${{ steps.find-dist.outputs.dist_dir }}
+          publish_dir: ./client/dist
