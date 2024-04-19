@@ -17,8 +17,19 @@ jobs:
           npm install
           cd server && npm run build
 
+      - name: Verify build completion and dist directory
+        run: |
+          if [ -d "client/dist" ]; then
+            echo "Build completed successfully!"
+            echo "Path to dist directory: $(realpath client/dist)"
+          else
+            echo "Build failed or dist directory does not exist."
+            exit 1
+          fi
+
       - name: Deploy to GitHub Pages
+        if: success() # Only deploy if the verification step is successful
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ../client/dist
+          publish_dir: client/dist # Use the dist directory found in the verification step
