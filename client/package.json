@@ -1,15 +1,14 @@
 {
-  "name": "business",
+  "name": "Brainwave",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://ishannaik.github.io/brainwave/",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build-if-needed",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "npx vite build",
-    "build-if-needed": "npm ls || npm install && npm run build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
