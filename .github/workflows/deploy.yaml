@@ -12,14 +12,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies and build
+      - name: Install dependencies and build client
         run: |
+          cd server
           npm install
-          cd server && npm run build
+          npm run build
+        working-directory: client
 
       - name: Deploy to GitHub Pages
-
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ../client/dist
+          publish_dir: client/dist
