@@ -41,3 +41,7 @@ Stay updated on our roadmap for upcoming features and improvements.
 ---
 
 ### Sign Up Today and Elevate Your Business with Brainwave!
+=======
+Website for College project in WAD
+Hosted on vercel, render, netlify, github pages
+
